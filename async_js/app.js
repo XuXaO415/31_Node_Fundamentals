@@ -9,9 +9,52 @@
 // firstPromise.catch(err => console.log("Rejected", err))
 // console.log("Last line for this request")
 
+// let url = ("https://swapi.dev/api/planets/1/?json")
+// let ourFirstPromise = axios.get(url);
+// ourFirstPromise.then(data => console.log(data));
+// ourFirstPromise.catch(err => console.log("Rejected!", err));
 
-// let res = axios.get('http://numbersapi.com/12/trivia?json')
+
+
+// axios.defaults.baseURL = "http://numbersapi.com";
+// axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+// axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded';
+// favNum = 12
+// async function favNums() {
+//     const config = {
+//         'X-Requested-With': 'XMLHttpRequest',
+//         'withCredentials': 'false',
+
+
+//     };
+//     // const proxy = {
+//     //     protocol: 'http',
+//     // }
+
+//     axios.get("http://numbersapi.com/12")
+
 //     .then(res => {
+//             console.log("Success", res);
+//         })
+//         .catch(err => {
+//             console.log("Error", err);
+//         })
+// }
+
+
+axios.get(`https://api.allorigins.win/get?url=${encodeURIComponent('http://numbersapi.com/12/?json')}`)
+    .then((response) => console.log('Success', response))
+    .catch((error) => console.log('Error', error))
+
+
+
+
+// axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+// let res = axios.get('http://numbersapi.com/12'
+
+//     )
+//     .then(res => {
+
 //         console.log("Success", res)
 //     })
 //     .catch(err => {
@@ -29,6 +72,7 @@
 //     })
 //     .then(data => console.log(data))
 //     .catch(err => console.log('Call didn\'t work'))
+
 
 
 
@@ -67,7 +111,7 @@
 // let multiNums = [];
 // for (let i = 1; i < 5; i++) {
 //     multiNums.push(
-//         axios.get(`http://numbersapi.com/${i}/trivia?json`));
+//         axios.get(`http://numbersapi.com/${i}/trivia?json`))
 // }
 // let listNums = document.querySelector("results");
 // Promise.all(multiNums)
@@ -80,7 +124,7 @@
 //     })
 //     .catch(err => console.log("Error", err))
 
-//     .then(data => console.log("Success", data))
+// .then(data => console.log("Success", data))
 //     .catch(err => console.log("Oh no!", err));
 
 // fetch(`
@@ -125,10 +169,10 @@
 // axios.get(`${baseURL}`)
 //     .then(res => {
 //         console.log(res.data);
-//         return axios.get(`https://deckofcardsapi.com/api/deck/${res.data}/draw/?count=2`)
+//         return axios.get(`https://deckofcardsapi.com/api/deck/${res.data}/draw/?count=1`)
 //     })
 
-// console.log(res.data);
+
 
 // function sayHi() {
 //     returnPromise.resolve("HELLO!!")
