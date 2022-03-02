@@ -10,6 +10,6 @@
     "license": "ISC",
     "dependencies": {
         "axios": "^0.24.0",
-        "follow-redirects": ">=1.14.7"
+        "follow-redirects": ">=1.14.8"
     }
 }
